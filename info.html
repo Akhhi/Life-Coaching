@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="script.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unlock Your Full Potential with Life Coaching</title>
+    <style>
+        :root {
+            --bgColor: #D0C9C9;
+            --primaryColor: #ff6a53;
+            --grey: #2D3D44;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bgColor);
+            color: var(--grey);
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header,
+        .section,
+        .cta {
+            margin-bottom: 30px;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .header:hover,
+        .section:hover,
+        .cta:hover {
+            transform: translateY(-5px);
+        }
+
+        .header {
+            background: var(--primaryColor);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+
+        .illustration {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .illustration img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .section {
+            padding: 40px;
+            background: white;
+            position: relative;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .section::after {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            background: var(--primaryColor);
+            opacity: 0.1;
+            z-index: -1;
+            border-radius: 10px;
+        }
+
+        .section h2 {
+            color: var(--grey);
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .section p,
+        .section ul {
+            font-size: 1.3em;
+            line-height: 1.6;
+        }
+
+        .section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .section ul li {
+            background: var(--bgColor);
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+        }
+
+        .section ul li::before {
+            content: '✓';
+            margin-right: 10px;
+            color: var(--primaryColor);
+            font-weight: bold;
+        }
+
+        .cta {
+            background: var(--primaryColor);
+            color: white;
+            text-align: center;
+            padding: 15px 20px;
+        }
+
+        .cta h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .cta p {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            color: var(--grey);
+        }
+
+        .cta a {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            background: #d55643;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+            font-size: 1.3em;
+        }
+
+        .cta a:hover {
+            background: #b84438;
+        }
+
+        /* Add a black background color to the top navigation */
+        .topnav {
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            margin-top: 1.5rem;
+        }
+
+        /* Style the links inside the navigation bar */
+        .topnav a {
+            float: left;
+            display: block;
+            color: var(--grey);
+            text-align: center;
+            padding: 0.5rem 1.5rem;
+            text-decoration: none;
+            font-size: 1.2rem;
+            border-radius: 3rem;
+            margin: 0 0.5rem;
+        }
+
+        /* Change the color of links on hover */
+        .topnav a:hover {
+            background-color: var(--grey);
+            color: #ffffff;
+        }
+
+        /* Add an active class to highlight the current page */
+        .topnav a.active {
+            background-color: var(--primaryColor);
+            color: white;
+        }
+
+        /* Hide the link that should open and close the topnav on small screens */
+        .topnav .icon {
+            display: none;
+        }
+
+        /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+        @media screen and (max-width: 600px) {
+            .topnav a:not(:nth-child(2)) {
+                display: none;
+            }
+
+
+
+            .topnav a.icon {
+                float: right;
+                display: block;
+            }
+        }
+
+        /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+        @media screen and (max-width: 600px) {
+            .topnav {
+                margin: 0;
+                display: block;
+            }
+
+            .topnav a {
+                border-radius: 0;
+                margin: 0;
+            }
+
+            .topnav.responsive {
+                position: relative;
+            }
+
+            .topnav.responsive a.icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+
+            .topnav.responsive a {
+                float: none;
+                display: block;
+                text-align: center;
+            }
+
+            @media screen and (max-width: 768px) {
+                .header {
+                    padding: 15px 10px;
+                }
+
+                .header h1 {
+                    font-size: 1.2em;
+                }
+
+                .section {
+                    padding: 20px;
+                }
+
+                .section h2 {
+                    font-size: 2em;
+                }
+
+                .section p,
+                .section ul {
+                    font-size: 1.1em;
+                }
+
+                .cta h2 {
+                    font-size: 2em;
+                }
+
+                .cta p {
+                    font-size: 1.3em;
+                }
+
+                .cta a {
+                    font-size: 1.1em;
+                }
+            }
+
+            @media screen and (min-width: 1200px) {
+                .container {
+                    padding: 60px 20px;
+                    /* Increase padding for larger screens */
+                }
+
+                .header {
+                    padding: 1em 3em;
+                }
+
+                .header h1 {
+                    font-size: 2.5em;
+                    padding: 0.03em;
+                    /* Increase font size for header */
+                }
+
+                .section h2 {
+                    font-size: 2.5em;
+                    /* Increase font size for section headers */
+                }
+
+                .section p,
+                .section ul {
+                    font-size: 1.4em;
+                    /* Increase font size for section content */
+                }
+
+                .cta {
+                    padding: 1em 3.5em;
+                }
+
+                .cta h2 {
+                    font-size: 2.5em;
+                    /* Increase font size for CTA header */
+                }
+
+                .cta p {
+                    font-size: 1.6em;
+                    /* Increase font size for CTA content */
+                }
+
+                .cta a {
+                    font-size: 1.4em;
+                    /* Increase font size for CTA button */
+                }
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="topnav" id="myTopnav">
+        <a href="index.html">Home</a>
+        <a href="info.html" class="active">Info</a>
+        <a href="#about">Service</a>
+        <a href="#contact">Contact</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars" alt="☰"></i>
+        </a>
+    </div>
+    <div class="container">
+        <div class="header">
+            <h1>Unlock Your Full Potential with Life Coaching</h1>
+        </div>
+        <div class="illustration">
+            <img src="resource/key.svg" alt="Life Coaching Illustration">
+        </div>
+        <div class="section">
+            <h2>Why success seems so distant?</h2>
+            <p>We all have moments when thinking about our future feels overwhelming. Have you ever felt stuck or unsure
+                about your goals, leading to a lack of direction and motivation? At times, overcoming personal and
+                professional challenges can be daunting, leaving you feeling stressed and overwhelmed. Imagine having
+                someone to guide you, helping you unlock your full potential and navigate life's twists and turns with
+                confidence.</p>
+        </div>
+        <div class="section">
+            <h2>Life Coaching guides you to</h2>
+            <ul>
+                <li><strong>Mapped Direction: </strong> Gain clarity on your vision and set achievable goals.</li>
+                <li><strong>Strong Self-Awareness: </strong> Discover and harness your strengths, weaknesses, and
+                    values.
+                </li>
+                <li><strong>Reduced Accountability: </strong> Stay committed to your goals with ongoing support.</li>
+                <li><strong>Effective Problem-Solving: </strong> Develop strategies and tools to overcome obstacles.
+                </li>
+                <li><strong>Continuous Personal Growth: </strong> Foster ongoing improvement and self-development.</li>
+                <li><strong>Stress Management: </strong> Learn to manage stress and balance various life aspects
+                    effectively.</li>
+                <li><strong>Efficient Resource Use: </strong> Optimize your time, energy, and resources.</li>
+                <li><strong>Increased Motivation: </strong> Stay inspired and driven to achieve your ambitions.</li>
+                <li><strong>Better Decision-Making: </strong> Make informed and confident choices.</li>
+                <li><strong>Realize Your Potential: </strong> Unlock and reach your full potential in all areas of life.
+                </li>
+            </ul>
+        </div>
+        <div class="cta">
+            <h2>Your First Step to success</h2>
+            <p>Do not prolong any more, let us embark on this journey, seize the opportunity to navigate towards success
+                fearlessly. With the guidance of experienced motivators, you'll unlock your full potential, reaching the
+                heights you've always envisioned. Don't wait any longer—let's begin this transformative journey today
+                itself!</p>
+            <p><a href="#contact">Successful Life</a> Just a click away!</p>
+        </div>
+    </div>
+</body>
+
+</html>
