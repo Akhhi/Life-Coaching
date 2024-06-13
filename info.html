@@ -234,87 +234,109 @@
                 display: block;
                 text-align: center;
             }
+        }
 
-            @media screen and (max-width: 768px) {
-                .header {
-                    padding: 15px 10px;
-                }
-
-                .header h1 {
-                    font-size: 1.2em;
-                }
-
-                .section {
-                    padding: 20px;
-                }
-
-                .section h2 {
-                    font-size: 2em;
-                }
-
-                .section p,
-                .section ul {
-                    font-size: 1.1em;
-                }
-
-                .cta h2 {
-                    font-size: 2em;
-                }
-
-                .cta p {
-                    font-size: 1.3em;
-                }
-
-                .cta a {
-                    font-size: 1.1em;
-                }
+        @media screen and (max-width: 768px) {
+            .header {
+                padding: .7rem;
             }
 
-            @media screen and (min-width: 1200px) {
-                .container {
-                    padding: 60px 20px;
-                    /* Increase padding for larger screens */
-                }
+            .header h1 {
+                font-size: 1rem;
+            }
 
-                .header {
-                    padding: 1em 3em;
-                }
+            .section {
+                padding: 20px;
+            }
 
-                .header h1 {
-                    font-size: 2.5em;
-                    padding: 0.03em;
-                    /* Increase font size for header */
-                }
+            .section h2 {
+                font-size: 2em;
+            }
 
-                .section h2 {
-                    font-size: 2.5em;
-                    /* Increase font size for section headers */
-                }
+            .section p,
+            .section ul {
+                font-size: 1.1em;
+            }
 
-                .section p,
-                .section ul {
-                    font-size: 1.4em;
-                    /* Increase font size for section content */
-                }
+            .cta h2 {
+                font-size: 2em;
+            }
 
-                .cta {
-                    padding: 1em 3.5em;
-                }
+            .cta p {
+                font-size: 1.3em;
+            }
 
-                .cta h2 {
-                    font-size: 2.5em;
-                    /* Increase font size for CTA header */
-                }
+            .cta a {
+                font-size: 1.1em;
+            }
 
-                .cta p {
-                    font-size: 1.6em;
-                    /* Increase font size for CTA content */
-                }
+            .topnav a {
+                float: left;
+                display: block;
+                color: var(--grey);
+                text-align: center;
 
-                .cta a {
-                    font-size: 1.4em;
-                    /* Increase font size for CTA button */
-                }
+                text-decoration: none;
+                font-size: 0.8rem;
+
+            }
+        }
+
+        @media screen and (min-width: 1200px) {
+            .container {
+                padding: 60px 20px;
+                /* Increase padding for larger screens */
+            }
+
+            .topnav a {
+                float: left;
+                display: block;
+                color: var(--grey);
+                text-align: center;
+                padding: 0.2rem 1rem;
+                text-decoration: none;
+                font-size: 0.8rem;
+                border-radius: 3rem;
+                margin: 0 0.7rem;
+            }
+
+            .header {
+                padding: 1em 3em;
+            }
+
+            .header h1 {
+                font-size: 2.5em;
+                padding: 0.03em;
+                /* Increase font size for header */
+            }
+
+            .section h2 {
+                font-size: 2.5em;
+                /* Increase font size for section headers */
+            }
+
+            .section p,
+            .section ul {
+                font-size: 1.4em;
+                /* Increase font size for section content */
+            }
+
+            .cta {
+                padding: 1em 3.5em;
+            }
+
+            .cta h2 {
+                font-size: 2.5em;
+                /* Increase font size for CTA header */
+            }
+
+            .cta p {
+                font-size: 1.6em;
+
+            }
+
+            .cta a {
+                font-size: 1.4em;
             }
         }
     </style>
@@ -324,7 +346,7 @@
     <div class="topnav" id="myTopnav">
         <a href="index.html">Home</a>
         <a href="info.html" class="active">Info</a>
-        <a href="#about">Service</a>
+        <a href="service.html">Service</a>
         <a href="#contact">Contact</a>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fa fa-bars" alt="☰"></i>
@@ -332,12 +354,12 @@
     </div>
     <div class="container">
         <div class="header">
-            <h1>Unlock Your Full Potential with Life Coaching</h1>
+            <h1>Unlock Your Full Potential &nbsp;<i class="fa fa-unlock" alt="🔓"></i></h1>
         </div>
         <div class="illustration">
             <img src="resource/key.svg" alt="Life Coaching Illustration">
         </div>
-        <div class="section">
+        <div class="section" class="section1">
             <h2>Why success seems so distant?</h2>
             <p>We all have moments when thinking about our future feels overwhelming. Have you ever felt stuck or unsure
                 about your goals, leading to a lack of direction and motivation? At times, overcoming personal and
