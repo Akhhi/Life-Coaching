@@ -58,7 +58,7 @@ body {
     float: right;
 }
 
-.button {
+.btn {
     border: none;
     background-color: #ffffff00;
     padding: 0.3rem 1rem 0;
@@ -126,6 +126,13 @@ body {
     display: none;
 }
 
+.form {
+    background-color: var(--primaryColor);
+    width: 30rem;
+    height: 20rem;
+    position: relative;
+}
+
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 600px) {
     .topnav a:not(:first-child) {
@@ -167,6 +174,7 @@ body {
     }
 
     .message {
+        width: -moz-fit-content;
         width: fit-content;
         margin: 0;
     }
@@ -180,6 +188,7 @@ body {
 @media only screen and (max-width: 600px) {
 
     .pic {
+        width: -moz-fit-content;
         width: fit-content;
         height: auto;
         padding: 0;
@@ -207,7 +216,7 @@ body {
         font-size: 1.5rem;
     }
 
-    .button {
+    .btn {
         margin-top: 1rem;
     }
 
@@ -215,6 +224,8 @@ body {
         border-radius: 2rem;
         padding: 0.6rem 1.7rem;
     }
+
+
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -256,7 +267,7 @@ body {
         margin: 0;
     }
 
-    .button {
+    .btn {
         padding: .25rem .4rem;
         font-size: .73rem;
         margin: 1rem 0 0 0;
@@ -289,7 +300,7 @@ body {
 
     }
 
-    .button {
+    .btn {
         margin: 1.5rem 1rem 0 0;
         padding: .5rem 1rem;
         font-size: 0.8rem;
@@ -332,7 +343,7 @@ body {
 
     }
 
-    .button {
+    .btn {
         padding: 0.7rem 1.7rem;
     }
 
@@ -384,7 +395,7 @@ body {
         margin-top: 0.5rem;
     }
 
-    .button {
+    .btn {
         border: none;
         background-color: #ffffff00;
         padding: 0.3rem 1rem;

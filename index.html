@@ -7,32 +7,41 @@
     <title>Life Coaching</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="script.js"></script>
+
 </head>
 
 <body>
 
-    <div class="topnav" id="myTopnav">
-        <a href="index.html" class="active">Home</a>
-        <a href="info.html">Info</a>
-        <a href="service.html">Service</a>
-        <a href="#contact">Contact</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <header class="topnav" id="myTopnav" role="navigation" aria-label="Main navigation">
+        <a href="index.html" class="active" aria-label="Home">Home</a>
+        <a href="info.html" aria-label="Info">Info</a>
+        <a href="service.html" aria-label="Service">Service</a>
+        <a href="#contact" aria-label="Contact">Contact</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()" aria-label="Toggle navigation">
             <i class="fa fa-bars" alt="☰"></i>
         </a>
-    </div>
-    <img class="pic" src="resource/paths.svg" alt="illustration">
-    <div class="message">
-        <h1 class="headline">LIFE COACHING<br>REACH YOUR GOALS</h1>
-        <div class="line">&nbsp;</div>
+    </header>
+    <main>
+        <img class="pic" src="resource/paths.svg" alt="illustration of many paths and confused person">
+        <div class="message">
+            <h1 class="headline">LIFE COACHING<br>REACH YOUR GOALS</h1>
+            <div class="line">&nbsp;</div>
 
-        <span class="para">
-            <p class="details">Unlock Your Potential, Surpass Limits, and<span class="br"></span>Embrace Success with
-                Expert Guidance!<span class="br"></span>We
-                help you to pedal so you can ride!</p>
-        </span>
-        <button class="button join">Join Now</button> <button class="button more">More Info</button>
-    </div>
+            <span class="para">
+                <p class="details">Unlock Your Potential, Surpass Limits, and<span class="br"></span>Embrace Success
+                    with
+                    Expert Guidance!<span class="br"></span>We
+                    help you to pedal so you can ride!</p>
+            </span>
+            <button class="btn join" aria-label="Join Now">Join Now</button> <button class="btn more"
+                aria-label="More Info">More Info</button>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="script.js"></script>
 </body>
+
 
 </html>
