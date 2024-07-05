@@ -5,6 +5,10 @@
     --primaryColor: #ff6a53;
     --grey: #2D3D44;
     --p1font: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+    /* colors for info html */
+    --bgColorIndex: #E6D7BB;
+    /* #F8CB67 #4493F3 #4D79BE #DBEBFB */
 }
 
 body {
@@ -44,7 +48,6 @@ body {
 }
 
 .details {
-    font-size: 1rem;
     font-family: var(--p1font);
     color: var(--sec);
     text-wrap: balance;
@@ -104,7 +107,7 @@ body {
     text-align: center;
     padding: 0.5rem 1.5rem;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     border-radius: 3rem;
     margin: 0 0.5rem;
 }
@@ -155,6 +158,7 @@ body {
     .topnav a {
         border-radius: 0;
         margin: 0;
+        font-size: 1.6rem;
     }
 
     .topnav.responsive {
@@ -180,7 +184,8 @@ body {
     }
 
     body {
-        height: auto;
+        height: 100vh;
+        width: 100vw;
     }
 }
 
@@ -191,9 +196,9 @@ body {
         width: -moz-fit-content;
         width: fit-content;
         height: auto;
-        padding: 0;
+        padding: 1.2rem;
         transform: scale(0.9);
-        margin: 0;
+        margin-top: 1.7rem;
     }
 
     .message {
@@ -205,6 +210,7 @@ body {
 
     .headline {
         margin-top: 0;
+        padding: 0 0.7rem;
     }
 
     div.line {
@@ -213,11 +219,13 @@ body {
     }
 
     p {
-        font-size: 1.5rem;
+        font-size: 1.7rem;
+        padding: 0 0.6rem;
     }
 
     .btn {
         margin-top: 1rem;
+        font-size: 1.35rem;
     }
 
     .join {
@@ -411,5 +419,63 @@ body {
         background-color: var(--primaryColor);
         color: white;
         margin-right: 2.5rem;
+    }
+}
+
+/* below is the style sheet for info html */
+@media only screen and (min-width: 1150px) {
+
+    .info-header,
+    .section,
+    .cta {
+        margin-bottom: 30px;
+        border-radius: 10px;
+        transition: transform 0.3s;
+    }
+
+    .info-header:hover:hover,
+    .section:hover,
+    .cta:hover {
+        transform: translateY(-5px);
+    }
+
+    .info-header {
+        color: var(--primaryColor);
+
+    }
+
+    .info-pic {
+        width: 52%;
+        height: auto;
+        float: right;
+        padding-right: 1.5rem;
+        padding-bottom: 3rem;
+    }
+
+    .info-message {
+        width: 35%;
+        text-align: left;
+        padding: 0 0 0 5rem;
+        display: inline-block;
+    }
+
+    .info-line {
+        border-top: .3rem solid var(--primaryColor);
+        float: left;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .info-pic {
+        width: 100vw;
+    }
+
+    .info-details {
+        padding: 0 1.8rem;
+        font-size: 1.5rem;
+    }
+
+    .info-header {
+        padding: 0 1.8rem;
     }
 }
