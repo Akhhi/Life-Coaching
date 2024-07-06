@@ -7,12 +7,19 @@
     <title>info</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        @media screen and (max-width: 600px) {
+            .topnav a.active {
+                display: block;
+            }
+        }
+    </style>
 </head>
 
 <body>
     <header class="topnav" id="myTopnav" role="navigation" aria-label="Main navigation">
-        <a href="info2.html" class="active" aria-label="Info">Info</a>
         <a href="index.html" aria-label="Home">Home</a>
+        <a href="info2.html" class="active" aria-label="Info">Info</a>
         <a href="service.html" aria-label="Service">Service</a>
         <a href="#contact" aria-label="Contact">Contact</a>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()" aria-label="Toggle navigation">

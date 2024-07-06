@@ -138,7 +138,7 @@ body {
 
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 600px) {
-    .topnav a:not(:first-child) {
+    .topnav a {
         display: none;
     }
 
@@ -468,11 +468,13 @@ body {
 @media only screen and (max-width: 600px) {
     .info-pic {
         width: 100vw;
+        padding: 0.8rem 0 1.2rem 0;
+        margin-top: 0;
     }
 
     .info-details {
         padding: 0 1.8rem;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
     .info-header {
