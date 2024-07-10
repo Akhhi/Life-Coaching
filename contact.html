@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Coaching Contact</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        :root {
+            --primaryColor: #7D29AB;
+            --grey: #7D29AB;
+        }
+
+        @media screen and (max-width: 600px) {
+            .topnav a.active {
+                display: block;
+            }
+
+            .topnav a {
+                color: #4e1461;
+            }
+        }
+
+        .topnav {
+            margin-bottom: 1rem;
+        }
+
+        .topnav a:hover {
+            background-color: #ba46f9;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: #aa83b7;
+            background: -moz-linear-gradient(101deg, rgba(170, 131, 183, 1) 41%, rgba(244, 206, 214, 1) 100%);
+            background: -webkit-linear-gradient(101deg, rgba(170, 131, 183, 1) 41%, rgba(244, 206, 214, 1) 100%);
+            background: linear-gradient(101deg, rgba(170, 131, 183, 1) 41%, rgba(244, 206, 214, 1) 100%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#aa83b7", endColorstr="#f4ced6", GradientType=1);
+        }
+
+        .contact-container {
+            height: 83vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .contact-left {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 20px;
+            margin-left: 5rem;
+        }
+
+        .contact-left-title h2 {
+            font-weight: 600;
+            font-size: 40px;
+            margin-bottom: .5rem;
+            background: -webkit-linear-gradient(180deg, #7D29AB, #4e1461);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .contact-left-title hr {
+            border: none;
+            width: 120px;
+            height: 5px;
+            background-color: #8424BC;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .contact-inputs {
+            background-color: #e4d5eb;
+            width: 400px;
+            height: 50px;
+            border: none;
+            outline: none;
+            padding-left: 25px;
+            font-weight: 500;
+            color: #555;
+            border-radius: 50px;
+        }
+
+        .contact-left textarea {
+            height: 140px;
+            padding-top: 15px;
+            border-radius: 20px;
+        }
+
+        .contact-inputs:focus {
+            border: 2px solid #ba46f9;
+        }
+
+        .contact-inputs::placeholder {
+            color: #7b34a2;
+        }
+
+        .contact-left button {
+            display: flex;
+            align-items: center;
+            padding: 15px 30px;
+            font-size: 16px;
+            color: white;
+            gap: 10px;
+            border: none;
+            border-radius: 50px;
+            background: linear-gradient(270deg, #7b34a2, #be61dc);
+            cursor: pointer;
+        }
+
+        .contact-left button img {
+            height: 15px;
+        }
+
+        .contact-right img {
+            width: 500px;
+            margin-top: 16px;
+        }
+
+        .contact-right {
+            gap: 20px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+        }
+
+        .social {
+            display: flex;
+            gap: 3rem;
+            flex-wrap: nowrap;
+            align-items: center;
+            justify-content: center;
+            margin-top: auto;
+            padding: 17px 0 0 0;
+            font-size: 1.7rem;
+        }
+
+        .facebook {
+            padding: 15px 60px;
+        }
+
+        .social i {
+            padding: 6px;
+            border-radius: 30%;
+            /* background-color: #8424BC; */
+            background: linear-gradient(170deg, #501c6d, #be61dc);
+            color: #f4ced6;
+        }
+
+        i.fa.fa-facebook {
+            padding: 6px 11px;
+        }
+
+        @media (max-width: 800px) {
+            .contact-inputs {
+                width: 80vw;
+
+            }
+
+            .contact-left {
+                margin-left: 0;
+            }
+
+            .contact-right {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="topnav" id="myTopnav" role="navigation" aria-label="Main navigation">
+        <a href="index.html" aria-label="Home">Home</a>
+        <a href="info2.html" aria-label="Info">Info</a>
+        <a href="services.html" aria-label="Service">Service</a>
+        <a href="contact.html" class="active" aria-label="Contact">Contact</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()" aria-label="Toggle navigation">
+            <i class="fa fa-bars" alt="☰"></i>
+        </a>
+    </header>
+    <main>
+        <div class="contact-container">
+            <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+                <div class="contact-left-title">
+                    <h2>Get in Touch</h2>
+                </div>
+                <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                <input type="text" name="name" placeholder="Your Name" class="contact-inputs" required>
+                <input type="email" name="email" placeholder="Your Email" class="contact-inputs" required>
+                <textarea name="message" placeholder="Your Message" class="contact-inputs contact-textarea"
+                    required></textarea>
+                <button type="submit">
+                    Submit
+                    <img src="resource/arrow_icon.png" alt="Arrow Icon">
+                </button>
+            </form>
+            <div class="contact-right">
+                <img src="resource/contactPurple.png" alt="Right Image">
+                <div class="social">
+                    <a href="#" class="fb"><i class="fa fa-facebook" aria-label="Facebook link" alt="FB"></i></a>
+                    <a href="#" class="whatsapp"><i class="fa fa-whatsapp" aria-label="Contact whatsapp link"
+                            alt="WA"></i></a>
+                    <a href="#" class="instagram"><i class="fa fa-instagram" aria-label="Instagram link" alt=""></i></a>
+                    <a href="#" class="youtube"><i class="fa fa-youtube" aria-label="Youtube links" alt="YT"></i></a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

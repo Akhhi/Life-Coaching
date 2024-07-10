@@ -125,13 +125,6 @@ body {
     display: none;
 }
 
-.form {
-    background-color: var(--primaryColor);
-    width: 30rem;
-    height: 20rem;
-    position: relative;
-}
-
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 600px) {
     .topnav a {
