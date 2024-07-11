@@ -414,7 +414,7 @@ body {
 /* below is the style sheet for info html */
 @media only screen and (min-width: 1150px) {
 
-    .info-header,
+    .service-header,
     .section,
     .cta {
         margin-bottom: 30px;
@@ -422,18 +422,18 @@ body {
         transition: transform 0.3s;
     }
 
-    .info-header:hover:hover,
+    .service-header:hover:hover,
     .section:hover,
     .cta:hover {
         transform: translateY(-5px);
     }
 
-    .info-header {
+    .service-header {
         color: var(--primaryColor);
 
     }
 
-    .info-pic {
+    .service-pic {
         width: 52%;
         height: auto;
         float: right;
@@ -441,32 +441,32 @@ body {
         padding-bottom: 3rem;
     }
 
-    .info-message {
+    .service-message {
         width: 35%;
         text-align: left;
         padding: 0 0 0 5rem;
         display: inline-block;
     }
 
-    .info-line {
+    .service-line {
         border-top: .3rem solid var(--primaryColor);
         float: left;
     }
 }
 
 @media only screen and (max-width: 600px) {
-    .info-pic {
+    .service-pic {
         width: 100vw;
         padding: 0.8rem 0 1.2rem 0;
         margin-top: 0;
     }
 
-    .info-details {
+    .service-details {
         padding: 0 1.8rem;
         font-size: 1.3rem;
     }
 
-    .info-header {
+    .service-header {
         padding: 0 1.8rem;
     }
 }
