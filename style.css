@@ -187,7 +187,6 @@ body {
         height: auto;
         padding: 1.2rem;
         transform: scale(0.9);
-        margin-top: 1.7rem;
     }
 
     .message {
@@ -202,14 +201,21 @@ body {
         padding: 0 0.7rem;
     }
 
-    div.line {
+    .line {
         float: none;
         display: inline-block;
+        margin-bottom: .5rem;
     }
 
-    p {
-        font-size: 1.7rem;
+    .para p {
+        font-size: 1.5rem;
         padding: 0 0.6rem;
+    }
+
+    .service p {
+        font-size: 1.38rem;
+        margin-top: 0;
+        line-height: 1.4rem;
     }
 
     .btn {
@@ -259,7 +265,7 @@ body {
         margin: 1rem 0;
     }
 
-    p {
+    .para p {
         font-size: 0.7rem;
         margin: 0;
     }
@@ -291,10 +297,19 @@ body {
         line-height: 2.2rem;
     }
 
-    p {
+    .service-header {
+        font-size: 2.04rem;
+    }
+
+    .para p {
         font-size: 0.8rem;
         margin: 0.5rem;
 
+    }
+
+    .service p {
+        margin: 0;
+        padding: 0;
     }
 
     .btn {
@@ -330,14 +345,22 @@ body {
         line-height: 3.1rem;
     }
 
-    p {
-        font-size: 1rem;
+    .service-header {
+        font-size: 2rem;
+        line-height: 2.2rem;
+    }
+
+    .para p {
+        font-size: 1.3rem;
         padding: 0;
+    }
+
+    .service p {
+        font-size: 1rem;
     }
 
     .line {
         margin: .3rem 0;
-
     }
 
     .btn {
@@ -354,7 +377,6 @@ body {
         margin-bottom: 0.5rem;
         margin-top: 3rem;
     }
-
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -375,6 +397,10 @@ body {
         margin: 6rem 0 2rem 4rem;
     }
 
+    .service-message {
+        margin-top: 2.3rem;
+    }
+
     .headline {
         color: var(--primaryColor);
         font-size: 2.7rem;
@@ -383,13 +409,17 @@ body {
         margin: 2rem 0;
     }
 
-    p {
-        font-size: 1rem;
+    .para p {
         font-family: var(--p1font);
         color: var(--sec);
         text-wrap: balance;
         display: inline-block;
-        margin-top: 0.5rem;
+        margin-top: 1rem;
+    }
+
+    .service p {
+        margin: 0;
+        padding: 0;
     }
 
     .btn {
@@ -408,6 +438,7 @@ body {
         background-color: var(--primaryColor);
         color: white;
         margin-right: 2.5rem;
+        border-radius: 5rem;
     }
 }
 
@@ -434,7 +465,7 @@ body {
     }
 
     .service-pic {
-        width: 52%;
+        width: 45%;
         height: auto;
         float: right;
         padding-right: 1.5rem;
