@@ -7,8 +7,8 @@
         {
             "type": "chrome",
             "request": "launch",
-            "name": "Open info2.html",
-            "file": "e:\\Websites\\My Works\\Life-Coaching\\info2.html"
+            "name": "Open info.html",
+            "file": "e:\\Websites\\My Works\\Life-Coaching\\info.html"
         },
         {
             "type": "pwa-msedge",
